@@ -35,6 +35,8 @@ namespace LeadOutPulsationCalculatorV100 {
 			}
 		}
 	private: System::Windows::Forms::TextBox^  textBox1;
+	private: System::Windows::Forms::TextBox^  textBox_rotorDiameter;
+	private: System::Windows::Forms::Label^  label_rotorDiameter;
 	protected:
 
 	private:
@@ -51,22 +53,42 @@ namespace LeadOutPulsationCalculatorV100 {
 		void InitializeComponent(void)
 		{
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_rotorDiameter = (gcnew System::Windows::Forms::TextBox());
+			this->label_rotorDiameter = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(12, 12);
+			this->textBox1->Location = System::Drawing::Point(12, 83);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(165, 237);
 			this->textBox1->TabIndex = 0;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
+			// textBox_rotorDiameter
+			// 
+			this->textBox_rotorDiameter->Location = System::Drawing::Point(16, 14);
+			this->textBox_rotorDiameter->Name = L"textBox_rotorDiameter";
+			this->textBox_rotorDiameter->Size = System::Drawing::Size(88, 20);
+			this->textBox_rotorDiameter->TabIndex = 1;
+			// 
+			// label_rotorDiameter
+			// 
+			this->label_rotorDiameter->AutoSize = true;
+			this->label_rotorDiameter->Location = System::Drawing::Point(110, 17);
+			this->label_rotorDiameter->Name = L"label_rotorDiameter";
+			this->label_rotorDiameter->Size = System::Drawing::Size(78, 13);
+			this->label_rotorDiameter->TabIndex = 2;
+			this->label_rotorDiameter->Text = L"Rotor Diameter";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 261);
+			this->Controls->Add(this->label_rotorDiameter);
+			this->Controls->Add(this->textBox_rotorDiameter);
 			this->Controls->Add(this->textBox1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
